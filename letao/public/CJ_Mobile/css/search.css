@@ -1,0 +1,102 @@
+body{
+    background: #fff;
+}
+.lg_content{
+    padding-bottom: 0;
+}
+.lg_history{
+    padding: 10px;
+    color: #666;
+}
+
+.lg_history .title{
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+}
+.lg_history .icon_clear{
+    float: right;
+    font-size: 12px;
+    line-height: 20px;
+}
+.lg_history ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.lg_history ul li{
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding: 0 10px;
+}
+.lg_history ul li a{
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+.lg_history ul li .icon_delete{
+    color: #ccc;
+    font-size: 12px;
+    float: right;
+    margin-top: 8px;
+}
+.lg_orderBar{
+    height: 30px;
+    line-height: 30px;
+    background: #efeff4;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    box-shadow: 2px 0 2px #ccc;
+}
+.lg_orderBar a{
+    width: 25%;
+    font-size: 12px;
+    color: #333;
+    float: left;
+    text-align: center;
+}
+.lg_orderBar a.now{
+    color: #ff3300;
+}
+#product_box{
+    min-height: 300px;
+}
+.lg_product{
+    float: left;
+    width: 50%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+.lg_product .box{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+    padding: 10px 0;
+}
+.lg_product .box img{
+    width: 100%;
+}
+.lg_product .box .name{
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.lg_product .box .price{
+    font-size: 12px;
+    color: #f30;
+    margin-right: 10px;
+}
+.lg_product .box .oldPrice{
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: line-through;
+}
+.lg_product .box .button{
+    background: #006699;
+    color: #fff;
+}

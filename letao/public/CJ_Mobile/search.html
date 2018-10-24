@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>搜索中心</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="Lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="Lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+<div class="lg_container">
+    <header class="lg_topBar">
+        <a href="javascript:history.back();" class="icon_back fa fa-arrow-left"></a>
+        <span class="lg_title">搜索中心</span>
+    </header>
+    <div class="lg_content">
+        <div class="lg_search">
+            <form action="#">
+                <input class="search_input" type="search" placeholder="搜索你喜欢的商品">
+            </form>
+            <a class="search_btn" href="javascript:;">搜索</a>
+        </div>
+        <div class="lg_history">
+            <!--<div class="mui-clearfix">-->
+                <!--<span class="title">搜索历史</span>-->
+                <!--<span class="icon_clear fa fa-trash">清空记录</span>-->
+            <!--</div>-->
+            <!--<ul>-->
+                <!--<li><a href="#">nike</a><span class="icon_delete fa fa-close"></span></li>-->
+                <!--<li><a href="#">耐克</a><span class="icon_delete fa fa-close"></span></li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+    <!--<footer class="lg_tabBar">-->
+        <!--<ul>-->
+            <!--<li class="now"><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>-->
+            <!--<li><a href="cate.html"><span class="fa fa-bars"></span><p>分类</p></a></li>-->
+            <!--<li><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>-->
+            <!--<li><a href="user/index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>-->
+        <!--</ul>-->
+    <!--</footer>-->
+</div>
+<script type="text/html" id="searchTpl">
+    <% if(model && model.length){%>
+    <div class="mui-clearfix">
+        <span class="title">搜索历史</span>
+        <span class="icon_clear fa fa-trash">清空记录</span>
+    </div>
+    <ul>
+        <%for(var i = model.length-1;i >= 0;i--){%>
+        <li><a data-key="<%=model[i]%>" href="javascript:;"><%=model[i]%></a><span class="icon_delete fa fa-close"></span></li>
+        <%}%>
+    </ul>
+    <%}else{%>
+        <span class="title">没有历史搜索记录</span>
+    <%}%>
+</script>
+<script src="Lib/mui/js/mui.min.js"></script>
+<script src="Lib/artTemplate/template-native.js"></script>
+<script src="Lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

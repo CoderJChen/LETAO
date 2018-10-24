@@ -1,0 +1,96 @@
+
+.lg_nav{
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.lg_nav a{
+    width: 33.3333%;
+    float: left;
+}
+.lg_nav a img{
+    display: block;
+    width: 100%;
+
+}
+.lg_active{
+    border-top: 1px solid red;
+    margin-top: 15px;
+    padding:  0 10px;
+    background: #46b8da;
+}
+.lg_active a:nth-child(2n+1){
+    width: 67.1%;
+    float: left;
+}
+.lg_active a:nth-child(2n+1) img{
+    width: 50%;
+    float: left;
+}
+.lg_active a:nth-child(2n){
+    width: 32.9%;
+    float: right;
+}
+.lg_active a:nth-child(2n) img{
+    width: 100%;
+}
+.lg_brand{
+    padding: 0 10px;
+}
+.lg_brand img{
+    width: 100%;
+    display: block;
+}
+.lg_brand ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lg_brand ul li{
+    width:25%;
+    float: left;
+}
+.lg_live{
+    margin-top: 10px;
+    padding: 0 10px;
+
+}
+.lg_live > img{
+    width: 100%;
+}
+.lg_live .lg_product{
+    width: 50%;
+    float: left;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+.lg_live .lg_product .box{
+    width: 100%;
+    box-shadow: 0 0 5px darkgrey;
+    text-align: center;
+    padding: 10px 0;
+}
+.lg_live .lg_product .box img{
+    width: 100%;
+}
+.lg_product .box .name{
+    padding: 0 10px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.lg_product .box .price{
+    font-size: 12px;
+    color: red;
+    margin-right: 10px;
+}
+.lg_product .box .oldPrice{
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: line-through;
+}
+.lg_product .box .button{
+    background: #006699;
+    color: #fff;
+}
+

@@ -1,0 +1,67 @@
+body{
+    background: #c9c9c9;
+}
+.lg_content{
+    height: 100%;
+    background: #46b8da;
+}
+.lg_content .cate_left{
+    width: 80px;
+    height: 100%;
+    float: left;
+}
+.lg_content .cate_left > div{
+    padding: 0.1px;
+}
+.lg_content .cate_left ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lg_content .cate_left ul li{
+   width: 100%;
+    text-align: center;
+    background: #fff;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #c9c9c9;
+    font-size: 14px;
+}
+.lg_content .cate_left ul li.now{
+    border: none;
+    background: #c9c9c9;
+}
+.cate_right{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.cate_right > div{
+    padding:0.5px;
+}
+.cate_right ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+.cate_right ul li{
+    float: left;
+    width: 33.333%;
+}
+.cate_right ul li a{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.cate_right ul li a img{
+    /*display: block;*/
+    /*max-width: 66px;*/
+    /*margin: 0 auto;*/
+    width: 100%;
+}
+.cate_right ul li a p{
+    font-size: 12px;
+    text-align: center;
+
+}

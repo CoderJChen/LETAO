@@ -1,0 +1,188 @@
+/*body{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+.lg_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    /*background: hotpink;*/
+}
+/**
+头部导航
+ */
+.lg_topBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    line-height: 84px;
+    z-index: 999;
+    background: #006699;
+    text-align: center;
+    color: #fff;
+}
+.lg_topBar .lg_title{
+    font-size: 18px;
+}
+.lg_topBar .icon_back{
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    top: 30px;
+    font-size: 18px;
+    padding: 3px;
+}
+.lg_topBar form{
+    padding: 0 40px;
+}
+.lg_topBar form input{
+    background: #fff;
+    border-radius: 2px;
+    padding: 0 5px;
+    height: 30px;
+    color: #ccc;
+    margin-bottom: 0;
+}
+.lg_topBar .icon_search{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: #fff;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.lg_content{
+    width: 100%;
+    height: 100%;
+    padding-top: 64px;
+    padding-bottom: 44px;
+    position: relative;
+}
+.lg_content .mui-scroll-wrapper{
+    /*width: 100%;*/
+    height: 100%;
+    position: relative;
+}
+.lg_content .mui-scroll-wrapper .mui-scroll{
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+}
+
+.lg_search{
+    position: relative;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.lg_search form{
+    height: 30px;
+}
+.lg_search .search_input{
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    background: #fff;
+    border: 1px solid #006699;
+    padding: 0;
+    padding-left: 10px;
+    text-align: left;
+}
+.lg_search .search_btn{
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    top: 0;
+    background: #006699;
+    width: 60px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    border-radius:0 4px 4px 0;
+    color: #fff;
+    vertical-align: middle;
+}
+
+/**
+底部导航
+ */
+
+.lg_tabBar{
+    width: 100%;
+    height: 44px;
+    background: red;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+}
+.lg_tabBar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lg_tabBar ul li{
+    float: left;
+    width: 25%;
+    height: 44px;
+    background: #006699;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 0;
+}
+.lg_tabBar ul li a{
+    color: #fff;
+}
+.lg_tabBar ul li.now a,
+.lg_tabBar ul li.now a p{
+    color: orange;
+}
+.lg_tabBar ul li a p{
+    font-size: 12px;
+    color: #fff;
+}
+
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+}
+.loading::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 2px solid #006699;
+    animation: rotation 1s ease-in-out infinite;
+    -webkit-animation: rotation 1s ease-in-out infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+@-webkit-keyframes rotation {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+@keyframes rotation {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>购物车</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="Lib/mui/css/mui.css">
+    <link rel="stylesheet" href="Lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<div class="lg_container">
+    <header class="lg_topBar">
+        <span class="lg_title">购物车</span>
+        <a href="search.html" class="icon_search fa fa-search"></a>
+    </header>
+    <div class="lg_content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view" id="cart_box">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cart_order">订单总额：&yen;<span id="cartAmount">0.00</span> <a href="javascript:;">生成订单</a></div>
+    <footer class="lg_tabBar">
+        <ul>
+            <li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li><a href="cate.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li class="now"><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li><a href="user/index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+<script type="text/html" id="cartTpl">
+    <%if(model && model.length){%>
+    <%for(var i = 0;i < model.length;i++){%>
+    <%var item = model[i];%>
+    <li data-product="<%=item.id%>" class="mui-table-view-cell">
+        <div class="mui-slider-right mui-disabled">
+            <%if(item.statu == 1 && item.num > 0){%>
+            <a data-id="<%=item.id%>" class="mui-btn mui-btn-blue">编辑</a>
+            <%}%>
+            <a data-id="<%=item.id%>" class="mui-btn mui-btn-red">删除</a>
+        </div>
+        <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+            <%var pic = item.pic[0] && item.pic[0].picAddr || '/CJ_Mobile/images/none.jpg'%>
+            <img src="<%=pic%>" class="mui-media-object mui-pull-left">
+            <div class="mui-media-body">
+                <p class="name"><%=item.proName%></p>
+                <p class="info">
+                    <span class="price">&yen;<%=item.price%></span>
+                    <span class="oldPrice">&yen;<%=item.oldPrice || '0.00'%></span>
+                    <span class="number">x<%=item.num%>双</span>
+                </p>
+                <p><span class="size">鞋码：<%=item.size%></span></p>
+            </div>
+            <%if(item.statu == 1 && item.num > 0){%>
+            <input type="checkbox" data-id="<%=item.id%>">
+            <%}else{%>
+            <span class="novalidate">无效</span>
+            <%}%>
+        </a>
+    </li>
+    <%}%>
+    <%}else{%>
+    <div class="mui-text-center">购物车空的</div>
+    <%}%>
+</script>
+<script type="text/html" id="cartUpdateTpl">
+<div class="cart_update">
+    <div class="p_size">
+        尺码：<%var size = model.productSize || '35-45';var arr = size.split('-');var startSize = arr[0],endSize = arr[1];%>
+        <%for(var i = startSize;i <= endSize;i++){%>
+        <span class="btn_size <%=i==model.size?'now':''%>"><%=i%></span>
+        <%}%>
+    </div>
+    <div class="p_number">
+        数量：<span class="jian">-</span><input readonly type="text" value="<%=model.num||0%>" data-max="<%=model.productNum%>"><span class="jia">+</span>
+    </div>
+</div>
+</script>
+<script src="Lib/mui/js/mui.min.js"></script>
+<script src="Lib/artTemplate/template-native.js"></script>
+<script src="Lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

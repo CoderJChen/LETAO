@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>用户中心</title>
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../Lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../Lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+<div class="lg_container bgg">
+    <header class="lg_topBar">
+        <span class="lg_title">登录</span>
+        <a href="../search.html" class="icon_search fa fa-search"></a>
+    </header>
+    <div class="lg_content">
+        <ul class="mui-table-view mui-table-view-chevron">
+            <li class="mui-table-view-cell mui-media">
+                <a class="mui-navigate-right" href="#account">
+                    <img class="mui-media-object mui-pull-left head-img" id="head-img" src="../images/user.jpg">
+                    <div class="mui-media-body">
+                        加载中...<p class="mui-ellipsis">绑定手机:加载中...</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="password.html" class="mui-navigate-right">账号与安全</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="../cart.html" class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="address.html" class="mui-navigate-right">收货地址管理</a>
+            </li>
+        </ul>
+        <div class="p20">
+            <a href="javascript:;" class="mui-btn btn_outLogin">退出登录</a>
+        </div>
+    </div>
+    <footer class="lg_tabBar">
+        <ul>
+            <li><a href="../index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li><a href="../cate.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li><a href="../cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li class="now"><a href="index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+<script src="../Lib/mui/js/mui.min.js"></script>
+<script src="../Lib/artTemplate/template-native.js"></script>
+<script src="../Lib/zepto/zepto.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/user/index.js"></script>
+</body>
+</html>
